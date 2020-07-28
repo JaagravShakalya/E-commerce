@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    body{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/Sign\ Up.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh ;
+    }
+    .container{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        height: 60vh;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        color: black;
+        background-color: whitesmoke;
+    }
+    .container input{
+        background: none;
+        outline: none;
+        border: 1px solid green;
+        margin: 3px;
+        padding: 1vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    h1{
+        font-family: sans-serif
+    }
+    .submit a{
+        text-decoration: none;
+        color: white;
+    }
+    .submit{
+        width: 30%;
+        background: #258128;
+        border: 2px solid #4caf50;
+        color: white;
+        padding: 5px;
+        font-size: 3vh;
+        cursor: pointer;
+        margin: 12px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .submit button{
+        background: none;
+        outline:none;
+        border: none;
+    }
+</style>
+<body>
+
+    <div class="container">
+        <h1>Sign Up</h1>
+        <div class="name">
+            <input type="text" placeholder="Your Name">
+        </div>
+        <div class="email">
+            <input type="text" placeholder="E-Mail">
+        </div>
+        <div class="password">
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="submit">
+            <button>
+                <a href="index.html">Submit</a>
+            </button>
+        </div>
+    </div>
+    
+</body>
+</html>

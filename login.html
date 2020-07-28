@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/login.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    .login-box{
+        width: 40vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: white;
+    }
+    .login-box h1{
+        float: left;
+        font-size: 6vh;
+        border-bottom: 6px solid #4caf50;
+        margin-bottom: 60px;
+        padding: 13px 0;
+    }
+    .text-box{
+        width: 100%;
+        overflow: hidden;
+        font-size: 5vh;
+        padding: 8px 0;
+        margin: 8px 0;
+        border-bottom: 1px solid #4caf50;
+    }
+    .text-box i{
+        float: left;
+        width: 5px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .text-box input{
+        border: none;
+        outline: none;
+        background: none;
+        color: white;
+        font-size: 3vh;
+        width: 80%;
+        float: right: ;;
+        margin: 0 40px;
+    }
+    .btn{
+        width: 100%;
+        background: #4caf50;
+        border: 2px solid #4caf50;
+        color: white;
+        padding: 5px;
+        font-size: 3vh;
+        cursor: pointer;
+        margin: 12px 0;
+    }
+    .btn a{
+        text-decoration: none;
+        color: white;
+        font-size: 3vh;
+    }
+
+    @media only screen and (max-width: 1050px){
+        .login-box{
+            width: 70vw;
+        }
+    }
+    @media only screen and (max-width: 642px){
+        .login-box{
+            width: 90vw;
+        }
+        .login-box h1{
+            font-size: 4vh;
+        }
+        .text-box input{
+            width: 60%; 
+        }
+    }
+</style>
+<body>
+    <div class="login-box">
+        <h1>Login</h1>
+        <div class="text-box">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" placeholder="Username" name="" id="">
+        </div>
+
+        <div class="text-box">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input type="password" placeholder="Password" name="" id="">
+        </div>
+
+        <button class="btn"><a href="index.html">Sign In</a></button>
+    </div>
+    
+</body>
+</html>
