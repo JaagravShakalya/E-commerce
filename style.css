@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
 
@@ -273,3 +274,178 @@ nav {
           height: 40vh;
       }
   }
+
+.prod-category{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    height: 93vh;
+    grid-gap: 6.141px;
+    padding: 6.141px;
+    background-color: rgb(250, 250, 250)
+}
+.prod{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vh;
+    color: white;
+    background: rgb(126, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    border-radius: 6.141px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.prod button{
+    background:rgb(194, 231, 255);
+    color: black;
+    border-radius: 3px;
+    height: 4.5vh;
+    width: 60px;
+    margin-top: 2vh;
+}
+.prod button a {
+    text-decoration: none;
+    color: black;
+    font-family:'Montserrat', sans-serif;
+}
+#prod-1{
+    grid-row:1/2;
+    grid-column: 1/2;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/appliances.jpg);
+}
+#prod-2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/fashion.jpg);  
+}
+#prod-3{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/tech.jpg);
+}
+#prod-4{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/beauty.jpg);
+}
+@media only screen and (max-width: 730px){
+    .prod{
+        font-size: 3vh;
+    }
+}
+
+
+.cashback-container{
+    height:55vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: rgb(231, 231, 231);
+}
+.cashback{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cashback img{
+    height: 300px;
+    border-radius: 20px;
+}
+.cashback-text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    font-family: 'Roboto', sans-serif;
+}
+.cashback-text h1{
+    font-size: 7vh;
+    margin: 10px;
+}
+@media only screen and (max-width: 922px){
+    .cashback-container{
+        flex-direction: column;
+        height: 80vh;
+    }
+    .cashback-container img{
+        height: 250px;
+    }
+    .cashback-text{
+        width: 100%;
+
+    }
+    .cashback-text h1{
+        font-size: 4vh;
+        margin: 10px;
+    }
+    .cashback-text h2{
+        font-size: 3vh;
+    }
+    .cashback{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.seller{
+    height: 50vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(236, 236, 236);
+    margin-top: 10px;
+}
+.seller-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.seller-img img{
+    height: 270px;
+    border-radius: 20px;
+}
+.seller-text{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 10px;
+    font-size: 4vh;
+}
+.seller button{
+    height: 5vh;
+    width: 90px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+@media only screen and (max-width: 878px){
+    .seller{
+        flex-direction: column;
+        height: 60vh;
+    }
+    .seller-img img{
+        height: 180px;
+    }
+    .seller-text{
+        font-size: 3vh;
+        width: 100%;
+    }
+}

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Psoppins%26display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Smartphones</title>
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*navbar design*/
+nav {
+    top: 0;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 7vh;
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    opacity: 1;
+    top: 0;
+    z-index:2;
+}
+
+.logo {
+    color: rgb(58, 58, 58);
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 4vh;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    z-index:2;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    z-index:2;
+}
+.nav-links li {
+    list-style: none;
+    transition: 0.2s all ease;
+    z-index:2;
+}
+.nav-links a {
+    color: rgb(70, 70, 70);
+    font-weight: bold;
+    text-transform: uppercase ;
+    letter-spacing: 1px ;
+    text-decoration: none;
+    font-size: 2vh;
+    padding: 1vh;
+    transition: 0.3s all ease-in;
+    z-index:2;
+    text-align: center;
+    border: 1px solid rgb(52, 52, 219);
+    border-radius: 30px;
+}
+.nav-links .cart-icon{
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 3.5vh;
+    padding: 3.5px;
+}
+.nav-links a:hover{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    z-index:2;
+}
+
+.search-container input{
+     height: 6vh;
+     width: 100px;
+     margin: 0;
+}
+.search-container button{
+    height: 5vh;
+    width: 5vw;
+    margin: 0;
+    cursor: pointer;
+}
+.search-container{
+    top:50%;
+    left:50%;
+    
+}
+
+.burger {
+    display: none;
+    z-index:2;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin: 5px;
+    transition: all 0.3s ease;
+    z-index:2;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 20%;
+        z-index:2;
+    }
+}
+
+@media only screen and (max-width: 827px) {
+    body {
+        overflow-x: hidden;
+        z-index:2;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 93vh;
+        top: 7vh;
+        background-color: rgb(255, 239, 254);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index:2;
+    }
+    .nav-links li a:hover{
+        background-color: rgb(240, 240, 240); 
+        color: rgb(0, 0, 0);
+        border-radius: 0px;
+        z-index:2;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+        z-index:2;
+    }
+    .logo{
+        display: none;
+    }
+    .search-container input{
+        width: 60%;
+        margin: 0;
+    }
+    .search-container button{
+        width: 3vw;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;
+        z-index:2;
+    }
+
+}
+
+.nav-active {
+        transform: translateX(0%);
+        z-index:2;
+}
+.search-container input{
+    height: 4vh;
+    width: 150px;
+}
+.search-container button{
+   height: 4vh;
+   width: 30px;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.header{
+    height: 93vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/smartphone.jpg);
+    color: white;
+    font-size: 3vw;
+    font-family: 'Lexend Zetta', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    z-index: -1;
+}
+.products{
+    margin-top: 100vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: white;
+}
+.cards{
+    height: 500px;
+    width: 300px;
+    border: 1px solid rgb(199, 199, 199);
+    margin: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+.cards p{
+    color: rgb(121, 121, 121);
+    font-size: 3vh;
+}
+.cards button{
+    width: 100%;
+    height: 10%;
+    font-size: 2.5vh;
+}
+</style>
+
+<body>
+    
+    <nav>
+        <div class="logo">
+            <h4>Company X</h4>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signUp.html">Sign Up</a></li>
+            <li><a href="#" class="cart-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>smartphones</h1>
+    </header>
+
+    <section class="products">
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+       
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <div class="img">
+                <img src="images/smartphone-product.jpg" alt="">
+            </div>
+            <h2>Phone</h2>
+            <p>Price: 20 Rs.</p>
+            <button>Add to Cart</button>
+        </div>
+       
+
+    </section>
+
+<script src="app.js"></script>
+</body>
+</html>

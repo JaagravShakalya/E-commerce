@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Psoppins%26display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <title>Fashion</title>
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*navbar design*/
+nav {
+    top: 0;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 7vh;
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    opacity: 1;
+    top: 0;
+    z-index:7;
+}
+
+.logo {
+    color: rgb(58, 58, 58);
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 4vh;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    z-index:7;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    z-index:7;
+}
+.nav-links li {
+    list-style: none;
+    transition: 0.2s all ease;
+    z-index:7;
+}
+.nav-links a {
+    color: rgb(70, 70, 70);
+    font-weight: bold;
+    text-transform: uppercase ;
+    letter-spacing: 1px ;
+    text-decoration: none;
+    font-size: 2vh;
+    padding: 1vh;
+    transition: 0.3s all ease-in;
+    z-index:7;
+    text-align: center;
+    border: 1px solid rgb(52, 52, 219);
+    border-radius: 30px;
+}
+.nav-links .cart-icon{
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 3.5vh;
+    padding: 3.5px;
+}
+.nav-links a:hover{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    z-index:7;
+}
+
+.search-container input{
+     height: 6vh;
+     width: 100px;
+     margin: 0;
+}
+.search-container button{
+    height: 5vh;
+    width: 5vw;
+    margin: 0;
+    cursor: pointer;
+}
+.search-container{
+    top:50%;
+    left:50%;
+    
+}
+
+.burger {
+    display: none;
+    z-index:7;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin: 5px;
+    transition: all 0.3s ease;
+    z-index:7;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 20%;
+        z-index:7;
+    }
+}
+
+@media only screen and (max-width: 827px) {
+    body {
+        overflow-x: hidden;
+        z-index:7;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 93vh;
+        top: 7vh;
+        background-color: rgb(255, 239, 254);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index:7;
+    }
+    .nav-links li a:hover{
+        background-color: rgb(240, 240, 240); 
+        color: rgb(0, 0, 0);
+        border-radius: 0px;
+        z-index:7;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+        z-index:7;
+    }
+    .logo{
+        display: none;
+    }
+    .search-container input{
+        width: 60%;
+        margin: 0;
+    }
+    .search-container button{
+        width: 3vw;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;
+        z-index:7;
+    }
+
+}
+
+.nav-active {
+        transform: translateX(0%);
+        z-index:7;
+}
+.search-container input{
+    height: 4vh;
+    width: 150px;
+}
+.search-container button{
+   height: 4vh;
+   width: 30px;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.category{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 7vh;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Lexend Zetta', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+.category button{
+    height: 5vh;
+    width: 70px;
+}
+.category button a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+#category-1{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/t-shirt-hanger.jpg');
+    z-index: 1;
+}
+#category-2{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/jeans.jpg');
+    z-index: 2;
+}
+#category-3{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/sportswear.jpg');
+    z-index: 3;
+}
+#category-4{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/formalwear.jpg');
+    z-index: 4;
+}
+#category-5{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/shoes.jpg');
+    z-index: 5;
+}
+@media only screen and (max-width:768px){
+    .category{
+        font-size: 2.5vh; 
+    }
+}
+</style>
+<body>
+    
+        <nav>
+            <div class="logo">
+                <h4>Company X</h4>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+                <li><a href="#" class="cart-icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+        <section class="fashion-category">
+            <div class="category" id="category-1">
+                <h1>T-shirts</h1>
+                <button><a href="">Shop</a></button>
+            </div>
+            <div class="category" id="category-2">
+                <h1>Jeans</h1>
+                <button><a href="">Shop</a></button>
+            </div>
+            <div class="category" id="category-3">
+                <h1>Sportswear</h1>
+                <button><a href="">Shop</a></button>
+            </div>
+            <div class="category" id="category-4">
+                <h1>formalwear</h1>
+                <button><a href="">Shop</a></button>
+            </div>
+            <div class="category" id="category-5">
+                <h1>footwear</h1>
+                <button><a href="">Shop</a></button>
+            </div>
+        </section>
+
+<script src="app.js"></script>
+</body>
+</html>
