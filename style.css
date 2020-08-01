@@ -253,7 +253,7 @@ nav {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
-    animation-duration: 0.3s;
+    animation-duration: 1s;
   }
   
   @-webkit-keyframes fade {
@@ -284,6 +284,56 @@ nav {
     padding: 6.141px;
     background-color: rgb(250, 250, 250)
 }
+.deals{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.deals-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+}
+.deals-head{
+    margin-bottom: 5vh;
+    text-align: left;
+    font-family: 'Lexend Zetta', sans-serif;
+    text-transform: uppercase;
+}
+.deals div{
+    display: flex;
+    flex-direction: column;
+    align-items :center;
+    justify-content: space-between;
+    height: 200px;
+    width: 200px;
+    border: 0.2px solid black;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.deals img{
+    height: 40%;
+    width: 100%:
+}
+.deals div button{
+    width: 100%;
+    margin-bottom: 0;
+    height: 15%;
+}
+.deals div h2{
+    font-size: 3vh;
+}
+.deals div p{
+    font-size: 2.5vh;
+    color: rgb(110, 110, 110)
+}
+
 .prod{
     display: flex;
     flex-direction: column;
@@ -335,6 +385,51 @@ nav {
     .prod{
         font-size: 3vh;
     }
+}
+
+.searched-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+}
+.most-searched{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.most-searched-product{
+    height: 250px;
+    width: 200px;
+    border: 0.2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+.most-searched-product img{
+    height: 50%;
+    width: 100%;
+}
+.most-searched-product button{
+    height: 13%;
+    width :100%;
+}
+.searched-head{
+    font-family: 'Lexend Zetta', sans-serif;
+    text-transform: uppercase;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.most-searched-product h2{
+    font-size: 4vh;
+}
+.most-searched-product p{
+    font-size: 2.5vh;
+    color: rgb(110, 110, 110)
 }
 
 
@@ -448,4 +543,17 @@ nav {
         font-size: 3vh;
         width: 100%;
     }
+}
+
+#about{
+    width: 100%;
+    height: 20vh;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: black;
+    color: rgb(206, 206, 206);
+    margin-top: 5vh;
+    padding: 2vh;
 }
